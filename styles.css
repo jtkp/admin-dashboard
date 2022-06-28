@@ -9,7 +9,7 @@
 body {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: min-content 1fr;
     height: 100vh;
     background-color: #475569;
     color: #F8FAFC;
@@ -78,11 +78,38 @@ img {
     outline: none;
 }
 
-#top {
+#sidebar img {
+    justify-self: center;
+}
+
+#sidebar img[src="images/gamepad-square.png"] {
+    width: 50px;
+}
+
+#header {
+    grid-area: 1/2/2/3;
     display: grid;
-    grid-template-columns: 1fr 230px;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-rows: 2fr 3fr;
+    background-color: #1E293B;
+    padding: 16px 32px 0;
+}
+
+#header p {
+    font-weight: 700;
+}
+
+#top {
+    grid-area: 1;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    margin-bottom: 20px;
+}
+
+#bot {
+    grid-area: 2;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    margin-top: -12px;
 }
 
 .left {
@@ -101,28 +128,13 @@ img {
     padding-right: 32px;
 }
 
-#sidebar img {
-    justify-self: center;
+.text p:first-child {
+    font-size: 12px;
 }
 
-#sidebar img[src="images/gamepad-square.png"] {
-    width: 50px;
-}
-
-#header {
-    grid-area: 1/2/2/3;
-    display: grid;
-    grid-template-rows: 2fr 3fr;
-    background-color: #1E293B;
-    padding: 16px 32px;
-}
-
-#top {
-    grid-area: 1;
-}
-
-#bot {
-    grid-area: 2;
+.text > .name {
+    margin-top: 6px;
+    font-size: 20px;
 }
 
 #content {
