@@ -141,22 +141,48 @@ img {
     grid-area: 2/2/-1/-1;
     display: grid;
     grid-template-columns: 1fr 250px;
+    padding: 24px 24px 16px 16px;
+    gap: 16px;
 }
 
 #projects {
     grid-area: 1;
+    width: 100%;
+}
+
+#cards {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.card {
+    background-color: #1E293B;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    padding: 12px 16px;
+}
+
+.card .grad {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-image: linear-gradient(orange, orange);
+    top: 0;
+    left: 0;
+    border-radius: 12px 0 0 12px;
 }
 
 #non-projects {
     grid-area: 1/2;
 }
 
-.card {
-    background-color: #1E293B;
-}
-
 #rows {
     background-color: #1E293B;
+    padding: 24px;
 }
 
 #profiles {
